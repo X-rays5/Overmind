@@ -68,7 +68,7 @@ export const MAX_OWNED_ROOMS = Infinity;
 /**
  * If you are running on shard3 (CPU limit 20), only claim this many rooms
  */
-export const SHARD3_MAX_OWNED_ROOMS = 3;
+export const SHARD3_MAX_OWNED_ROOMS = 2;
 
 /**
  * The amount of credits that Overmind will try to keep in the bank. Default:

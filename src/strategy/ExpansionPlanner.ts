@@ -51,6 +51,13 @@ export class ExpansionPlanner implements IExpansionPlanner {
 			if (allColonies.length >= SHARD3_MAX_OWNED_ROOMS) {
 				return;
 			}
+
+			for (const colony of allColonies) {
+				if (Game.rooms[colony.name]!.controller!.level! < 8) {
+					log.info(`Room ${colony} is not yet at RCL 8; not expanding to new rooms.`);
+					return;
+				}
+			}
 		}
 
 		const roomName = this.chooseNextColonyRoom();
